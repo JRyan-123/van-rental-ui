@@ -17,7 +17,9 @@ body::before{
   display: block;
   height: 50px;
 }
-
+.section{
+  height: 90vh;
+}
 .logo {
   width: 40px;  
   height: auto; 

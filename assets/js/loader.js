@@ -3,14 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // init AOS once
   AOS.init({ duration: 800, once: true });
 
-  // load initially and on button click
-loadContent('#nav', 'partials/navbar.html');
-loadContent('#hero', 'partials/hero.html');
-loadContent('#rides', 'partials/rides.html');
-loadContent('#promo', 'partials/promo.html');
-loadContent('#contacts', 'partials/contacts.html');
-loadContent('#footer', 'partials/footer.html');
-
 
 });
 
@@ -24,10 +16,19 @@ function loadContent( selector, url) {
     .then(html => {
       const target = document.querySelector(selector);
       target.innerHTML = html;
-          AOS.refreshHard();
+
     })
     .catch(err => {
       console.error('loadSection error:', err);
     });
 }
+
+  // load initially and on button click
+loadContent('#nav', 'partials/navbar.html');
+loadContent('#hero', 'partials/hero.html');
+loadContent('#rides', 'partials/rides.html');
+loadContent('#promo', 'partials/promo.html');
+loadContent('#contacts', 'partials/contacts.html');
+loadContent('#footer', 'partials/footer.html');
+
 
