@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TriarL300</title>
+  <!-- icon -->
+  <link rel="shortcut icon" href="assets/imgs/logo.png" type="image/x-icon">
+  <!-- font CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- style -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- bootstrap CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+
+  <!-- bootstrap icon CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <!-- aos css -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+</head>
+
+<body>
+  <!-- Loader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <section id="nav"></section>
+  <section id="hero"></section>
+  <section id="rides"></section>
+  <section id="promo"></section>
+  
+   <!-- Rates -->
+  <section class="py-5 bgc-light" id="qoute">
+    <div class="container">
+      <div>
+        <h2 class="fw-bold mb-0">Qoute</h2>
+        <small class="clr-yellow">Reserve your van now — fill the form and our agent will contact you to confirm.</small>
+      </div>
+      <div class="row mt-4">
+
+      <div class="col-lg-4 col-md-6 offset-md-0 col-10 offset-1 mb-4">
+        <div class="box shadow">
+            <form action="" id="qouteForm">
+
+              <label for="" class="form-label" >Service type</label>
+                <div class="input-group ">
+                  <select name="" id="serviceType" class="form-select">
+                   <option value="shuttle">Shuttle Service</option>
+                   <option value="cargo">Cargo</option>
+                </select>
+              </div>
+
+
+              <div class="mb-3 position-relative">
+                <label for="" class="form-label mb-0 mt-3">Pick-up point  <span class="me-2 clr-green"><i class="bi bi-geo-alt-fill"></i></span></label>
+                <div class="input-group">
+                 
+                  <input type="text" class="form-control" id="pickup" autocomplete="off" required>
+                  <button class="btn btn-outline-dark" id="resetPickup"><i class="bi bi-x"></i></button>
+                </div> 
+                <div id="pickupSuggestions" class="list-group position-absolute suggestions w-100 shadow"></div>
+              </div>
+
+              <div class="mb-3 position-relative">
+                <label for="" class="label-form">Drop-off point<span class="me-2 clr-red"><i class="bi bi-geo-alt-fill"></i></span></label>
+                <div class="input-group">
+                   
+                   <input type="text" class="form-control" id="dropoff" autocomplete="off" required>
+                  <button class="btn btn-outline-dark" id="resetDropoff"><i class="bi bi-x"></i></button>
+                </div>
+                <div id="dropoffSuggestions" class="list-group position-absolute suggestions w-100 shadow"></div>
+              </div>
+
+
+
+              <label for="" class="form-label" id="notify">Duration </label>
+              <div class="input-group" style="align-items: center;">
+                <select name="" id="days" class="form-control">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+                <p class="mb-0  p-2" id="p-days">Days</p>
+                <select name="" id="hours" class="form-control">
+                  <option value="0">0</option>
+                  <option value="6">6</option>
+                  <option value="12">12</option>
+                  <option value="18">18</option>
+                </select>
+                <p class="mb-0 p-2" id="p-hours">Hours</p>
+              </div>
+              
+              <!-- hidden km distance -->
+              <input type="hidden" id="distanceDisplay">
+
+              <div class="text-end">
+                <button type="submit" class="btn bgc-yellow mt-4">Get qoute</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+
+      <div class="col-lg-8 col-md-6 offset-md-0 col-10 offset-1">
+    <div id="map" class="w-100 rounded shadow"></div>
+  </div>
+      
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="contacts"></section>
+  <section id="footer"></section>
+
+    <!-- aos js -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- loader -->
+  <script src="assets/js/loader.js"></script>
+  <!-- bootstrap CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- leaflet JS map -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- js map -->
+  <script type="module" src="assets/js/maps/main.js"></script>
+  
+ <script>
+    // Hide loader once everything is loaded
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("preloader");
+      setTimeout(() => { // slight delay for smoothness
+        loader.classList.add("hidden");
+      }, 400);
+    });
+  </script>
+
+</body>
+
+</html>
