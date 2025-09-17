@@ -18,7 +18,7 @@ A clean, responsive frontend UI for a van rental service.
 
 This project is a frontend UI template for a van rental service. It includes:
 
-- A landing/home page with assets and sections for showcasing vans, services, etc.  
+- A landing/home page with assets and sections for showcasing vans and qoutes, services, etc.  
 - Use of partials for reusable components (header, footer, etc.).  
 - Designed to be responsive on different device sizes.  
 
@@ -39,13 +39,13 @@ The UI does **not** include backend functionality; it is focused on design and l
 
 Here are the primary technologies used in this UI:
 
-| Technology | Purpose |
-|-------------|---------|
-| 🌐 **HTML5** | Structure and semantic markup. |
-| 🎨 **CSS3** | Styling, layout, responsive design. |
-| ⚙️ **JavaScript** | Interactivity, dynamic behaviour. |
-| ⚙️ **Bootstrap 5** | . |
-| 📂 **Partials (templating)** | Modular components like header/footer to keep structure DRY. |
+
+
+ **HTML5** 
+ **CSS3** 
+ **JavaScript**
+  **Bootstrap 5**
+
 
 
 ---
