@@ -1,6 +1,6 @@
 # 🚐 Van Rental UI
 
-A clean, responsive frontend UI for a van rental service.
+A responsive frontend-only UI for a van rental service featuring a rental price estimator.
 
 ---
 
@@ -16,22 +16,20 @@ A clean, responsive frontend UI for a van rental service.
 
 ## About the Project
 
-This project is a frontend UI template for a van rental service. It includes:
+This project demonstrates a modern van rental website interface focused on layout, responsiveness, and user experience. It includes a client-side pricing calculator that provides instant rental cost estimates using JavaScript.
 
-- A landing/home page with assets and sections for showcasing vans and qoutes, services, etc.  
-- Use of partials for reusable components (header, footer, etc.).  
-- Designed to be responsive on different device sizes.  
-
-The UI does **not** include backend functionality; it is focused on design and layout.  
+The pricing computation logic was assisted by ChatGPT.
+No backend or payment integration is included. 
 
 ---
 
 ## Features
 
-- Responsive layout (desktop, tablet, mobile)  
-- Sectioned content: hero/banner, services, contact, etc.  
-- Clean navigation menu and footer component parts  
-- Modular code structure with partials to avoid repetition  
+- Fully responsive design (desktop, tablet, mobile)
+- Landing page with hero, services, and contact sections 
+- Reusable UI components using partials
+- Clean navigation and layout
+- Frontend pricing calculator with real-time cost estimation
 
 ---
 
